@@ -1,45 +1,51 @@
 package com.garbage.craftivity.ui.home
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import com.garbage.craftivity.R
 import com.garbage.craftivity.databinding.FragmentHomeBinding
+import com.garbage.craftivity.ui.home.menu.TypeTrashActivity
 
 class HomeFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        /*binding.itemInformation.setOnClickListener {
+            val intent = Intent(context, ::class.java)
+            binding.itemCraft.context.startActivity(intent)
+        }*/
+
+        binding.itemTypeTrash.setOnClickListener {
+            val intent = Intent(context, TypeTrashActivity::class.java)
+            binding.itemTypeTrash.context.startActivity(intent)
+        }
+
+        binding.itemContact.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "text/plain"
+            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("craftivity@gmail.com"))
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Email for Craftivity")
+            intent.putExtra(Intent.EXTRA_TEXT, "Hallo, ")
+            try {
+                startActivity(Intent.createChooser(intent, "Do You Want to Send Email ?"))
+            } catch (ex: ActivityNotFoundException) {
+                //do something else
+            }
+        }
     }
 }

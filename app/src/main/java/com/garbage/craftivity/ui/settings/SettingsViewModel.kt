@@ -1,13 +1,13 @@
-package com.garbage.craftivity.ui.dashboard
+package com.garbage.craftivity.ui.settings
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class SettingsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Home"
+        value = "Notiffff kamu"
     }
     val text: LiveData<String> = _text
 }

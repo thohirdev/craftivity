@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:iconSpaceReserved="false">
+
+    <PreferenceCategory
+        android:title="Setting"
+        app:allowDividerAbove="true">
+        <Preference
+            android:title="@string/setting_language"
+            android:key="@string/setting_language"
+            android:icon="@drawable/ic_language"
+            android:iconSpaceReserved="false"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
