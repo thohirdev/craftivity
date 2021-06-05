@@ -17,4 +17,15 @@
 
     <string name="setting_language">Setting Language</string>
 
+    <string name="information_trash">Information Trash</string>
+    <string name="gray">Gray</string>
+    <string name="txt_gray">Residue (cigarette, butts, diapers, tissue, cotton)</string>
+    <string name="blue">Blue</string>
+    <string name="txt_blue">Reycyled Wasted (paper, cardboard, newspaper)</string>
+    <string name="green">Green</string>
+    <string name="txt_green">Organic Waste (leaves, food, scraps, twigs)</string>
+    <string name="red">Red</string>
+    <string name="txt_red">B3 Waste/Hazardous and Toxic Materials (batteries)</string>
+    <string name="yellow">Yellow</string>
+    <string name="txt_yellow">Reusable Grabage (plastic, glass, cans)</string>
 </resources>

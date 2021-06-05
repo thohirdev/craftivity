@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.garbage.craftivity.databinding.FragmentHomeBinding
+import com.garbage.craftivity.ui.home.menu.InformationActivity
 import com.garbage.craftivity.ui.home.menu.TypeTrashActivity
 
 class HomeFragment : Fragment() {
@@ -25,10 +26,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /*binding.itemInformation.setOnClickListener {
-            val intent = Intent(context, ::class.java)
+        binding.itemInformation.setOnClickListener {
+            val intent = Intent(context, InformationActivity::class.java)
             binding.itemCraft.context.startActivity(intent)
-        }*/
+        }
 
         binding.itemTypeTrash.setOnClickListener {
             val intent = Intent(context, TypeTrashActivity::class.java)
