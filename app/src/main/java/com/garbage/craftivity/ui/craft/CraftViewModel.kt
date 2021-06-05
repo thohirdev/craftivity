@@ -1,11 +1,14 @@
 package com.garbage.craftivity.ui.craft
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.garbage.craftivity.data.local.CraftEntity
-import com.garbage.craftivity.utils.DataCraft
+import com.garbage.craftivity.data.Repository
+import com.garbage.craftivity.data.room.response.CraftResponse
 
-class CraftViewModel : ViewModel() {
+class CraftViewModel (private val repository: Repository): ViewModel() {
 
-    fun getCraft(): List<CraftEntity> = DataCraft.generateCraft()
+    fun getCraft(): LiveData<ArrayList<CraftResponse>> = repository.getCraft()
+
+    fun getProgressLoad() : LiveData<Boolean> = repository.loadData
 
 }
