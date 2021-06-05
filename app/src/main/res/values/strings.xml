@@ -16,5 +16,6 @@
     <string name="share">Lets see the %s in the Craftivity App</string>
 
     <string name="setting_language">Setting Language</string>
+    <string name="category">Category</string>
 
 </resources>

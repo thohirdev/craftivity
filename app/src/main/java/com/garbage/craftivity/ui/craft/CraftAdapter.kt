@@ -1,5 +1,6 @@
 package com.garbage.craftivity.ui.craft
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -8,6 +9,15 @@ import com.bumptech.glide.request.RequestOptions
 import com.garbage.craftivity.R
 import com.garbage.craftivity.data.room.response.CraftResponse
 import com.garbage.craftivity.databinding.ItemsCraftBinding
+import com.garbage.craftivity.ui.detail.DetailCraftActivity
+import com.garbage.craftivity.ui.detail.DetailCraftActivity.Companion.AUTHOR_CRAFT
+import com.garbage.craftivity.ui.detail.DetailCraftActivity.Companion.CATEGORY_CRAFT
+import com.garbage.craftivity.ui.detail.DetailCraftActivity.Companion.CRAFT_ID
+import com.garbage.craftivity.ui.detail.DetailCraftActivity.Companion.INSTRUCTIONS_CRAFT
+import com.garbage.craftivity.ui.detail.DetailCraftActivity.Companion.RATE_CRAFT
+import com.garbage.craftivity.ui.detail.DetailCraftActivity.Companion.SUPPLIES_CRAFT
+import com.garbage.craftivity.ui.detail.DetailCraftActivity.Companion.THUMBNAIL_CRAFT
+import com.garbage.craftivity.ui.detail.DetailCraftActivity.Companion.TITLE_CRAFT
 
 class CraftAdapter(private val callback: FragmentCallback) : RecyclerView.Adapter<CraftAdapter.CraftViewHolder>() {
 
@@ -43,6 +53,21 @@ class CraftAdapter(private val callback: FragmentCallback) : RecyclerView.Adapte
                 txtAuthor.text = craft.author
 
                 imgShare.setOnClickListener { callback.onShareClick(craft) }
+
+                itemView.setOnClickListener {
+                    val intent = Intent(itemView.context, DetailCraftActivity::class.java)
+
+                    intent.putExtra(CRAFT_ID, craft.craftId)
+                    intent.putExtra(THUMBNAIL_CRAFT, craft.image)
+                    intent.putExtra(TITLE_CRAFT, craft.title)
+                    intent.putExtra(AUTHOR_CRAFT, craft.author)
+                    intent.putExtra(CATEGORY_CRAFT, craft.category_craft)
+                    intent.putExtra(RATE_CRAFT, craft.rate_craft)
+                    intent.putExtra(SUPPLIES_CRAFT, craft.supplies_craft)
+                    intent.putExtra(INSTRUCTIONS_CRAFT, craft.instructions_craft)
+
+                    itemView.context.startActivity(intent)
+                }
 
                 /*itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailCraftActivity::class.java)

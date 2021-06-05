@@ -14,4 +14,16 @@ data class CraftResponse (
 
     @SerializedName("author_craft")
     val author: String,
+
+    @SerializedName("category_craft")
+    val category_craft: String,
+
+    @SerializedName("supplies_craft")
+    val supplies_craft: String,
+
+    @SerializedName("rate_craft")
+    val rate_craft: String,
+
+    @SerializedName("instructions_craft")
+    val instructions_craft: String,
 )
