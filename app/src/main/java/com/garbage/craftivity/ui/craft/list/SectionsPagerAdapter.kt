@@ -11,18 +11,21 @@ class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager) :
 
     companion object {
         @StringRes
-        private val TAB_TITLES = intArrayOf(R.string.paper, R.string.glass)
+        private val TAB_TITLES = intArrayOf(R.string.cardboard,R.string.glass,R.string.metal,R.string.paper,R.string.plastics )
     }
 
     override fun getItem(position: Int): Fragment =
         when (position) {
             0 -> CraftPaperFragment()
             1 -> CraftGlassFragment()
+            2 -> CraftGlassFragment()
+            3 -> CraftGlassFragment()
+            4 -> CraftGlassFragment()
             else -> Fragment()
         }
 
     override fun getPageTitle(position: Int): CharSequence = mContext.resources.getString(TAB_TITLES[position])
 
-    override fun getCount(): Int = 2
+    override fun getCount(): Int = 5
 
 }

@@ -34,6 +34,7 @@
     <string name="txt_yellow">Reusable Grabage (plastic, glass, cans)</string>
 
     <string name="type_trash">Type Of Trash</string>
+    <string name="cardboard">Cardboard</string>
     <string name="paper">Paper</string>
     <string name="plastics">Plastics</string>
     <string name="txt_plastic">Of all the different materials we toss in the trash, plastics cause by far the biggest problem. They last a long time in the environment without breaking down—sometimes as much as 500 years. They\'re very light and they float, so plastic litter drifts across the oceans and washes up on our beaches, killing wildlife and scarring the shoreline. The only trouble is, plastics are relatively hard to recycle. There are many different kinds of plastic and they all have to be recycled in a different way. There\'s so much plastic about that waste plastic material doesn\'t have much value, so it\'s not always economic to collect. Plastic containers also tend to be large and, unless people squash them, quickly fill up recycling bins.</string>
@@ -42,6 +43,7 @@
     <string name="paper_and_cardboard">Paper and cardboard</string>
     <string name="txt_paper_and_cardboard">In the early 1970s, photocopier manufacturers got scared that we would stop using paper and turn into a paperless society. Not much chance of that! Over four decades later, the bad news is that we\'re producing more paper than ever before. But the good news is that we\'re recycling more as well. Unlike some materials, paper can be recycled only so many times. That\'s because it\'s made from plant fibers that become shorter during paper-making. When they\'re too short, they no longer make decent paper. In practice, this means some new paper always has to be added during the papermaking process.</string>
     <string name="glass">Glass</string>
+    <string name="trash">Rrash</string>
     <string name="txt_glass">Glass is very easy to recycle; waste bottles and jars can be melted down and used again and again. You simply toss old glass into the furnace with the ingredients you\'re using to make brand-new glass. Bottle banks (large containers where waste glass is collected) were the original examples of community recycling in many countries.</string>
 
     <string name="information_craft">Information Craft</string>

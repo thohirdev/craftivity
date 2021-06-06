@@ -28,6 +28,7 @@ import com.garbage.craftivity.ml.ModelQuantTl
 
 import com.garbage.craftivity.ui.craft.CraftAdapter
 import com.garbage.craftivity.ui.craft.CraftViewModel
+import com.garbage.craftivity.ui.craft.list.ListCraftActivity
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
@@ -104,6 +105,10 @@ class CamFragment : Fragment() {
             var max = getMax(outputFeature0.floatArray)
 
             text_view.setText(labels?.get(max))
+
+            val moveIntent = Intent(activity, ListCraftActivity::class.java)
+            moveIntent.putExtra("CRAFT_CATEGORY", max)
+            startActivity(moveIntent)
 
 // Releases model resources if no longer used.
             model.close()
