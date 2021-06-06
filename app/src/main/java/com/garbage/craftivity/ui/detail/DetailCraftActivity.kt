@@ -5,11 +5,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.garbage.craftivity.R
-import com.garbage.craftivity.data.local.CraftEntity
 import com.garbage.craftivity.databinding.ActivityDetailCraftBinding
 
 class DetailCraftActivity : AppCompatActivity() {
@@ -33,8 +31,7 @@ class DetailCraftActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        //val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[DetailCraftViewModel::class.java]
+        supportActionBar?.setTitle(R.string.detail_craft)
 
         val extraDetail = intent.extras
         Log.e(ContentValues.TAG, "extraDetail: ${extraDetail}")
@@ -55,20 +52,6 @@ class DetailCraftActivity : AppCompatActivity() {
                     .into(binding.imagePhoto)
             }
         }
-    }
-
-    private fun getDetail(craft: CraftEntity) {
-        binding.txtTitle.text = craft.title
-        binding.txtAuthor.text = craft.author
-        binding.txtRating.text = craft.rate
-        binding.txtSupplies.text = craft.supplies
-        binding.txtInstruction.text = craft.instruction
-
-        Glide.with(this)
-            .load(craft.imageCraft)
-            .apply(RequestOptions.placeholderOf(R.drawable.ic_loading)
-                .error(R.drawable.ic_error))
-            .into(binding.imagePhoto)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

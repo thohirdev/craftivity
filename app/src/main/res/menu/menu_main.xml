@@ -3,9 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/action_category_paper"
+        android:title="@string/list_craft" />
+
+    <item
         android:id="@+id/action_favorite"
         android:icon="@drawable/ic_baseline_favorite_24"
         android:title="Favorite"
         app:showAsAction="always" />
-
 </menu>

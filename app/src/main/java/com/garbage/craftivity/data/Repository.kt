@@ -30,4 +30,28 @@ class Repository private constructor(private val remoteDataSource : RemoteDataSo
         })
         return dataCraft
     }
+
+    override fun getCraftPaper(): LiveData<ArrayList<CraftResponse>> {
+        loading.value = true
+        val dataCraft = MutableLiveData<ArrayList<CraftResponse>>()
+        remoteDataSource.getCraftPaper(object : RemoteDataSource.LoadCallback {
+            override fun getAllData(response: ArrayList<CraftResponse>?) {
+                dataCraft.postValue(response)
+                loading.postValue(false)
+            }
+        })
+        return dataCraft
+    }
+
+    override fun getCraftGlass(): LiveData<ArrayList<CraftResponse>> {
+        loading.value = true
+        val dataCraft = MutableLiveData<ArrayList<CraftResponse>>()
+        remoteDataSource.getCraftGlass(object : RemoteDataSource.LoadCallback {
+            override fun getAllData(response: ArrayList<CraftResponse>?) {
+                dataCraft.postValue(response)
+                loading.postValue(false)
+            }
+        })
+        return dataCraft
+    }
 }

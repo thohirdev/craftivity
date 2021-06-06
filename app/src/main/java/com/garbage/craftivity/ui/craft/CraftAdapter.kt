@@ -51,6 +51,7 @@ class CraftAdapter(private val callback: FragmentCallback) : RecyclerView.Adapte
 
                 txtItemTitle.text = craft.title
                 txtAuthor.text = craft.author
+                txtCategory.text = craft.category_craft
 
                 imgShare.setOnClickListener { callback.onShareClick(craft) }
 
@@ -68,12 +69,6 @@ class CraftAdapter(private val callback: FragmentCallback) : RecyclerView.Adapte
 
                     itemView.context.startActivity(intent)
                 }
-
-                /*itemView.setOnClickListener {
-                    val intent = Intent(itemView.context, DetailCraftActivity::class.java)
-                    intent.putExtra(EXTRA_DATA, craft.craftId)
-                    itemView.context.startActivity(intent)
-                }*/
             }
         }
     }

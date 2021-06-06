@@ -28,9 +28,6 @@ class FactoryViewModel private constructor(private val repository: Repository) :
             modelClass.isAssignableFrom(CraftViewModel::class.java) -> {
                 return CraftViewModel(repository) as T
             }
-            /*modelClass.isAssignableFrom(DetailCraftViewModel::class.java) -> {
-                return DetailCraftViewModel(repository) as T
-            }*/
             else -> throw Throwable("Unknown ViewModel Class : " + modelClass.name)
         }
     }

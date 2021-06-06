@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.garbage.craftivity.databinding.FragmentHomeBinding
+import com.garbage.craftivity.ui.home.menu.CraftInformationActivity
 import com.garbage.craftivity.ui.home.menu.InformationActivity
 import com.garbage.craftivity.ui.home.menu.TypeTrashActivity
 
@@ -28,6 +29,11 @@ class HomeFragment : Fragment() {
 
         binding.itemInformation.setOnClickListener {
             val intent = Intent(context, InformationActivity::class.java)
+            binding.itemInformation.context.startActivity(intent)
+        }
+
+        binding.itemCraft.setOnClickListener {
+            val intent = Intent(context, CraftInformationActivity::class.java)
             binding.itemCraft.context.startActivity(intent)
         }
 

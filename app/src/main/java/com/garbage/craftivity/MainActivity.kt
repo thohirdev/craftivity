@@ -11,7 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.garbage.craftivity.databinding.ActivityMainBinding
-import com.garbage.craftivity.ui.favorite.FavoriteFragment
+import com.garbage.craftivity.ui.craft.list.ListCraftActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,12 +36,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_favorite, menu)
+        menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
+            R.id.action_category_paper -> {
+                val moveIntent = Intent(this, ListCraftActivity::class.java)
+                startActivity(moveIntent)
+            }
             R.id.action_favorite -> {
                 //val moveIntent = Intent(this, FavoriteFragment::class.java)
                 //startActivity(moveIntent)

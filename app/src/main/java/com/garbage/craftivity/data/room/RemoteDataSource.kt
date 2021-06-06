@@ -38,6 +38,42 @@ class RemoteDataSource {
         })
     }
 
+    fun getCraftPaper(callback : LoadCallback){
+        EspressoIdlingResource.increment()
+        ApiConfig.instance.getCategoryPaper().enqueue(object : Callback<ArrayList<CraftResponse>>{
+            override fun onResponse(call: Call<ArrayList<CraftResponse>>, response: Response<ArrayList<CraftResponse>>) {
+                if (response.isSuccessful){
+                    response.body()?.let {
+                        callback.getAllData(it)
+                    }
+                    EspressoIdlingResource.decrement()
+                }
+            }
+
+            override fun onFailure(call: Call<ArrayList<CraftResponse>>, t: Throwable) {
+                Log.e(TAG, "onFailure : ${t.message.toString()}")
+            }
+        })
+    }
+
+    fun getCraftGlass(callback : LoadCallback){
+        EspressoIdlingResource.increment()
+        ApiConfig.instance.getCategoryGlass().enqueue(object : Callback<ArrayList<CraftResponse>>{
+            override fun onResponse(call: Call<ArrayList<CraftResponse>>, response: Response<ArrayList<CraftResponse>>) {
+                if (response.isSuccessful){
+                    response.body()?.let {
+                        callback.getAllData(it)
+                    }
+                    EspressoIdlingResource.decrement()
+                }
+            }
+
+            override fun onFailure(call: Call<ArrayList<CraftResponse>>, t: Throwable) {
+                Log.e(TAG, "onFailure : ${t.message.toString()}")
+            }
+        })
+    }
+
     interface LoadCallback {
         fun getAllData(response: ArrayList<CraftResponse>?)
     }
