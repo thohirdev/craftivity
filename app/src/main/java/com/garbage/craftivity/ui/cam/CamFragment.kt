@@ -88,30 +88,34 @@ class CamFragment : Fragment() {
 
         make_prediction.setOnClickListener(View.OnClickListener {
 
-            var resized = Bitmap.createScaledBitmap(bitmap, 224, 224, true)
-            val model = ModelQuantTl.newInstance(this.requireContext())
+            if (this::bitmap.isInitialized) {
+                var resized = Bitmap.createScaledBitmap(bitmap, 224, 224, true)
+                val model = ModelQuantTl.newInstance(this.requireContext())
 
-            var tbuffer = TensorImage.fromBitmap(resized)
-            var byteBuffer = tbuffer.buffer
+                var tbuffer = TensorImage.fromBitmap(resized)
+                var byteBuffer = tbuffer.buffer
 
 // Creates inputs for reference.
-            val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.UINT8)
-            inputFeature0.loadBuffer(byteBuffer)
+                val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.UINT8)
+                inputFeature0.loadBuffer(byteBuffer)
 
 // Runs model inference and gets result.
-            val outputs = model.process(inputFeature0)
-            val outputFeature0 = outputs.outputFeature0AsTensorBuffer
+                val outputs = model.process(inputFeature0)
+                val outputFeature0 = outputs.outputFeature0AsTensorBuffer
 
-            var max = getMax(outputFeature0.floatArray)
+                var max = getMax(outputFeature0.floatArray)
 
-            text_view.setText(labels?.get(max))
+                //text_view.setText(labels?.get(max))
 
-            val moveIntent = Intent(activity, ListCraftActivity::class.java)
-            moveIntent.putExtra("CRAFT_CATEGORY", max)
-            startActivity(moveIntent)
+                val moveIntent = Intent(activity, ListCraftActivity::class.java)
+                moveIntent.putExtra("CRAFT_CATEGORY", max)
+                startActivity(moveIntent)
 
 // Releases model resources if no longer used.
-            model.close()
+                model.close()
+            }
+
+
         })
 
     }

@@ -46,10 +46,10 @@ class MainActivity : AppCompatActivity() {
                 val moveIntent = Intent(this, ListCraftActivity::class.java)
                 startActivity(moveIntent)
             }
-            R.id.action_favorite -> {
-                //val moveIntent = Intent(this, FavoriteFragment::class.java)
-                //startActivity(moveIntent)
-            }
+//            R.id.action_favorite -> {
+//                //val moveIntent = Intent(this, FavoriteFragment::class.java)
+//                //startActivity(moveIntent)
+//            }
         }
         return super.onOptionsItemSelected(item)
     }
