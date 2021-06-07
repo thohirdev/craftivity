@@ -7,7 +7,13 @@ interface DataSource {
 
     fun getCraft(): LiveData<ArrayList<CraftResponse>>
 
-    fun getCraftPaper(): LiveData<ArrayList<CraftResponse>>
+    fun getCraftCardboard(): LiveData<ArrayList<CraftResponse>>
 
     fun getCraftGlass(): LiveData<ArrayList<CraftResponse>>
+
+    fun getCraftMetal(): LiveData<ArrayList<CraftResponse>>
+
+    fun getCraftPaper(): LiveData<ArrayList<CraftResponse>>
+
+    fun getCraftPlastic(): LiveData<ArrayList<CraftResponse>>
 }

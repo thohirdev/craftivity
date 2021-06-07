@@ -18,16 +18,9 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.garbage.craftivity.R
 import com.garbage.craftivity.databinding.FragmentCamBinding
-import com.garbage.craftivity.databinding.FragmentCraftBinding
 import com.garbage.craftivity.ml.ModelQuantTl
 
-
-import com.garbage.craftivity.ui.craft.CraftAdapter
-import com.garbage.craftivity.ui.craft.CraftViewModel
 import com.garbage.craftivity.ui.craft.list.ListCraftActivity
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.TensorImage
@@ -95,11 +88,11 @@ class CamFragment : Fragment() {
                 var tbuffer = TensorImage.fromBitmap(resized)
                 var byteBuffer = tbuffer.buffer
 
-// Creates inputs for reference.
+                // Creates inputs for reference.
                 val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.UINT8)
                 inputFeature0.loadBuffer(byteBuffer)
 
-// Runs model inference and gets result.
+                // Runs model inference and gets result.
                 val outputs = model.process(inputFeature0)
                 val outputFeature0 = outputs.outputFeature0AsTensorBuffer
 
@@ -111,13 +104,10 @@ class CamFragment : Fragment() {
                 moveIntent.putExtra("CRAFT_CATEGORY", max)
                 startActivity(moveIntent)
 
-// Releases model resources if no longer used.
+                // Releases model resources if no longer used.
                 model.close()
             }
-
-
         })
-
     }
 
     override fun onResume() {

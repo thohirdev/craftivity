@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Craftivity</string>
+    <string name="title_home">Halaman Depan</string>
+    <string name="title_cam">Kamera</string>
+    <string name="title_settings">Pengaturan</string>
+    <string name="title_craft">Kerajinan</string>
+    <string name="setting_language">Pengaturan Bahasa</string>
+    <string name="list_craft">List Kerajinan</string>
+    <string name="e_mail_us">E-mail Kami</string>
+
+    <string name="image_detail">Foto Detail</string>
+    <string name="detail_craft">Detail Kerajinan</string>
+    <string name="name_craft">Name Kerajinan</string>
+    <string name="title">Judul</string>
+    <string name="author">Penulis</string>
+    <string name="category">Kategori</string>
+    <string name="supplies">Bahan</string>
+    <string name="suplies_detail">Detail Bahan</string>
+    <string name="instruction">Petunjuk</string>
+    <string name="instruction_detail">Detail Petunjuk</string>
+    <string name="share">Ayo lihat %s di Aplikasi Craftivity</string>
+
+    <string name="information_trash">Informasi Sampah</string>
+    <string name="gray">Abu abu</string>
+    <string name="txt_gray">Residu (rokok, puntung, popok, tisu, kapas)</string>
+    <string name="blue">Biru</string>
+    <string name="txt_blue">Reycyled Wasted (kertas, karton, koran)</string>
+    <string name="green">Hijau</string>
+    <string name="txt_green">Sampah Organik (daun, makanan, sisa, ranting)</string>
+    <string name="red">Merah</string>
+    <string name="txt_red">Limbah B3/Bahan Berbahaya dan Beracun (baterai)</string>
+    <string name="yellow">Kuning</string>
+    <string name="txt_yellow">Sampah Reusable (plastik, gelas, kaleng)</string>
+
+    <string name="trash">Sampah</string>
+    <string name="type_trash">Jenis Sampah</string>
+    <string name="cardboard">Kardus</string>
+    <string name="card_board">Kardus</string>
+    <string name="paper">Kertas</string>
+    <string name="plastics">Plastik</string>
+    <string name="txt_plastic">Dari semua bahan berbeda yang kita buang ke tempat sampah, plastik menyebabkan masalah terbesar sejauh ini. Mereka bertahan lama di lingkungan tanpa rusak — terkadang hingga 500 tahun. Mereka sangat ringan dan mengapung, sehingga sampah plastik hanyut melintasi lautan dan terdampar di pantai kita, membunuh satwa liar dan melukai garis pantai. Satu-satunya masalah adalah, plastik relatif sulit untuk didaur ulang. Ada banyak jenis plastik dan semuanya harus didaur ulang dengan cara yang berbeda. Ada begitu banyak plastik tentang limbah bahan plastik yang tidak memiliki banyak nilai, sehingga tidak selalu ekonomis untuk dikumpulkan. Wadah plastik juga cenderung besar dan, kecuali orang-orang meremasnya, dengan cepat mengisi tempat sampah daur ulang.</string>
+    <string name="metal">Logam</string>
+    <string name="txt_metal">Sebagian besar logam yang kita buang di rumah berasal dari kaleng makanan dan minuman serta aerosol. Biasanya kaleng makanan terbuat dari baja, yang dapat dicairkan dan diubah menjadi kaleng makanan baru. Kaleng minuman umumnya lebih tipis dan lebih ringan dan terbuat dari aluminium, yang juga dapat didaur ulang dengan sangat mudah. Penambangan aluminium adalah proses yang sangat intensif energi dan berbahaya bagi lingkungan. Itulah mengapa kaleng aluminium bekas memiliki nilai yang relatif tinggi dan mengapa mendaur ulangnya adalah hal yang baik untuk dilakukan.</string>
+    <string name="paper_and_cardboard">Kertas dan Kardus</string>
+    <string name="txt_paper_and_cardboard">Pada awal 1970-an, produsen mesin fotokopi takut bahwa kita akan berhenti menggunakan kertas dan berubah menjadi masyarakat tanpa kertas. Tidak banyak kesempatan untuk itu! Lebih dari empat dekade kemudian, kabar buruknya adalah kami memproduksi lebih banyak kertas daripada sebelumnya. Namun kabar baiknya adalah kami juga lebih banyak mendaur ulang. Tidak seperti beberapa bahan, kertas hanya dapat didaur ulang berkali-kali. Itu karena terbuat dari serat tumbuhan yang menjadi lebih pendek selama pembuatan kertas. Ketika mereka terlalu pendek, mereka tidak lagi membuat kertas yang layak. Dalam praktiknya, ini berarti beberapa kertas baru selalu harus ditambahkan selama proses pembuatan kertas.</string>
+    <string name="glass">Kaca</string>
+    <string name="txt_glass">Kaca sangat mudah didaur ulang; botol limbah dan stoples dapat dilebur dan digunakan lagi dan lagi. Anda cukup melemparkan gelas lama ke dalam tungku dengan bahan-bahan yang Anda gunakan untuk membuat gelas baru. Bank botol (wadah besar tempat sampah kaca dikumpulkan) adalah contoh asli daur ulang komunitas di banyak negara.</string>
+
+    <string name="information_craft">Informasi Kerajinan</string>
+    <string name="craft">Kerajinan</string>
+    <string name="txt_craft1">Kerajinan dari bahan limbah adalah benda-benda ciptaan dari bahan limbah atau sampah yang dibuat oleh tangan manusia. Kerajinan ini biasanya bisa menjadi hiasan kreatif atau barang serbaguna untuk penggunaan sehari-hari.</string>
+    <string name="txt_craft2">Selain menyalurkan kreativitas, pembuatan kerajinan limbah juga dapat memberikan sejumlah manfaat bagi lingkungan. Mulai dari mengurangi sampah yang tidak berguna hingga mengurangi polutan. Tidak hanya itu, kerajinan ini juga bisa dijual sebagai ekonomi kreatif.</string>
+    <string name="txt_craft3">Untuk membuatnya, Anda dapat mengumpulkan beberapa bahan limbah seperti kantong plastik, botol timah, hingga kaca. Dengan kreativitas, bahan-bahan ini dapat dengan mudah diubah menjadi karya seni serbaguna.</string>
+    <string name="examples_of_craft">Contoh Kerajinan</string>
+    <string name="txt_craft4">Kerajinan dari Bahan Lunak dapat dibedakan menjadi dua jenis, yaitu bahan lunak alami (Contoh bahan lunak alami adalah tanah liat, kulit, getah nyatu, bubur kertas, dan tanah liat tepung) dan bahan lunak buatan (Contohnya dari bahan lunak buatan adalah lilin, gipsum, fiberglass dan sabun).</string>
+    <string name="txt_craft5">Kerajinan dari Bahan Keras dibagi menjadi dua jenis yaitu bahan keras alami (Contoh bahan keras alami adalah kayu, rotan, bambu, tulang, biji-bijian, batu, pasir, dan kerang) dan Bahan Keras Buatan (Contoh bahan alam keras adalah besi, logam, kawat, kaca, semen, kaleng, dan timah)</string>
+    <string name="txt_craft6">Kerajinan dari dibagi dalam bentuk limbah lunak (Semua bagian tumbuhan yang dapat diakui dapat diolah menjadi produk kerajinan) dan limbah lunak anorganik (Contohnya plastik kemasan, kotak kemasan, kain perca, karet sintetis dan styrofoam) </string>
+
+    <string name="open_camera">Buka Kamera</string>
+    <string name="select_image">Pilih Foto</string>
+    <string name="make_prediction">Prediksi</string>
+    <string name="txt_select">Pilih Gambar dan Tekan Tombol Prediksi</string>
+
+</resources>

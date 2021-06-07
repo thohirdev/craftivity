@@ -4,11 +4,8 @@ import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import com.garbage.craftivity.R
 import com.garbage.craftivity.databinding.ActivityListCraftBinding
-import com.garbage.craftivity.ui.detail.DetailCraftActivity
 import com.google.android.material.tabs.TabLayout
 
 class ListCraftActivity : AppCompatActivity() {
@@ -18,7 +15,7 @@ class ListCraftActivity : AppCompatActivity() {
         val activityListCraftBinding = ActivityListCraftBinding.inflate(layoutInflater)
         setContentView(activityListCraftBinding.root)
 
-
+        supportActionBar?.setTitle(R.string.list_craft)
 
         val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
         activityListCraftBinding.viewPager.adapter = sectionsPagerAdapter

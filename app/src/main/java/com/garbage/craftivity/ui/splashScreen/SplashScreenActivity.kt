@@ -1,4 +1,4 @@
-package com.garbage.craftivity.ui.SplashScreen
+package com.garbage.craftivity.ui.splashScreen
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

@@ -38,9 +38,9 @@ class RemoteDataSource {
         })
     }
 
-    fun getCraftPaper(callback : LoadCallback){
+    fun getCraftCardboard(callback : LoadCallback){
         EspressoIdlingResource.increment()
-        ApiConfig.instance.getCategoryPaper().enqueue(object : Callback<ArrayList<CraftResponse>>{
+        ApiConfig.instance.getCategoryCardboard().enqueue(object : Callback<ArrayList<CraftResponse>>{
             override fun onResponse(call: Call<ArrayList<CraftResponse>>, response: Response<ArrayList<CraftResponse>>) {
                 if (response.isSuccessful){
                     response.body()?.let {
@@ -59,6 +59,60 @@ class RemoteDataSource {
     fun getCraftGlass(callback : LoadCallback){
         EspressoIdlingResource.increment()
         ApiConfig.instance.getCategoryGlass().enqueue(object : Callback<ArrayList<CraftResponse>>{
+            override fun onResponse(call: Call<ArrayList<CraftResponse>>, response: Response<ArrayList<CraftResponse>>) {
+                if (response.isSuccessful){
+                    response.body()?.let {
+                        callback.getAllData(it)
+                    }
+                    EspressoIdlingResource.decrement()
+                }
+            }
+
+            override fun onFailure(call: Call<ArrayList<CraftResponse>>, t: Throwable) {
+                Log.e(TAG, "onFailure : ${t.message.toString()}")
+            }
+        })
+    }
+
+    fun getCraftMetal(callback : LoadCallback){
+        EspressoIdlingResource.increment()
+        ApiConfig.instance.getCategoryMetal().enqueue(object : Callback<ArrayList<CraftResponse>>{
+            override fun onResponse(call: Call<ArrayList<CraftResponse>>, response: Response<ArrayList<CraftResponse>>) {
+                if (response.isSuccessful){
+                    response.body()?.let {
+                        callback.getAllData(it)
+                    }
+                    EspressoIdlingResource.decrement()
+                }
+            }
+
+            override fun onFailure(call: Call<ArrayList<CraftResponse>>, t: Throwable) {
+                Log.e(TAG, "onFailure : ${t.message.toString()}")
+            }
+        })
+    }
+
+    fun getCraftPaper(callback : LoadCallback){
+        EspressoIdlingResource.increment()
+        ApiConfig.instance.getCategoryPaper().enqueue(object : Callback<ArrayList<CraftResponse>>{
+            override fun onResponse(call: Call<ArrayList<CraftResponse>>, response: Response<ArrayList<CraftResponse>>) {
+                if (response.isSuccessful){
+                    response.body()?.let {
+                        callback.getAllData(it)
+                    }
+                    EspressoIdlingResource.decrement()
+                }
+            }
+
+            override fun onFailure(call: Call<ArrayList<CraftResponse>>, t: Throwable) {
+                Log.e(TAG, "onFailure : ${t.message.toString()}")
+            }
+        })
+    }
+
+    fun getCraftPlastic(callback : LoadCallback){
+        EspressoIdlingResource.increment()
+        ApiConfig.instance.getCategoryPlastic().enqueue(object : Callback<ArrayList<CraftResponse>>{
             override fun onResponse(call: Call<ArrayList<CraftResponse>>, response: Response<ArrayList<CraftResponse>>) {
                 if (response.isSuccessful){
                     response.body()?.let {

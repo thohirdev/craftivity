@@ -31,10 +31,10 @@ class Repository private constructor(private val remoteDataSource : RemoteDataSo
         return dataCraft
     }
 
-    override fun getCraftPaper(): LiveData<ArrayList<CraftResponse>> {
+    override fun getCraftCardboard(): LiveData<ArrayList<CraftResponse>> {
         loading.value = true
         val dataCraft = MutableLiveData<ArrayList<CraftResponse>>()
-        remoteDataSource.getCraftPaper(object : RemoteDataSource.LoadCallback {
+        remoteDataSource.getCraftCardboard(object : RemoteDataSource.LoadCallback {
             override fun getAllData(response: ArrayList<CraftResponse>?) {
                 dataCraft.postValue(response)
                 loading.postValue(false)
@@ -47,6 +47,42 @@ class Repository private constructor(private val remoteDataSource : RemoteDataSo
         loading.value = true
         val dataCraft = MutableLiveData<ArrayList<CraftResponse>>()
         remoteDataSource.getCraftGlass(object : RemoteDataSource.LoadCallback {
+            override fun getAllData(response: ArrayList<CraftResponse>?) {
+                dataCraft.postValue(response)
+                loading.postValue(false)
+            }
+        })
+        return dataCraft
+    }
+
+    override fun getCraftMetal(): LiveData<ArrayList<CraftResponse>> {
+        loading.value = true
+        val dataCraft = MutableLiveData<ArrayList<CraftResponse>>()
+        remoteDataSource.getCraftMetal(object : RemoteDataSource.LoadCallback {
+            override fun getAllData(response: ArrayList<CraftResponse>?) {
+                dataCraft.postValue(response)
+                loading.postValue(false)
+            }
+        })
+        return dataCraft
+    }
+
+    override fun getCraftPaper(): LiveData<ArrayList<CraftResponse>> {
+        loading.value = true
+        val dataCraft = MutableLiveData<ArrayList<CraftResponse>>()
+        remoteDataSource.getCraftPaper(object : RemoteDataSource.LoadCallback {
+            override fun getAllData(response: ArrayList<CraftResponse>?) {
+                dataCraft.postValue(response)
+                loading.postValue(false)
+            }
+        })
+        return dataCraft
+    }
+
+    override fun getCraftPlastic(): LiveData<ArrayList<CraftResponse>> {
+        loading.value = true
+        val dataCraft = MutableLiveData<ArrayList<CraftResponse>>()
+        remoteDataSource.getCraftPlastic(object : RemoteDataSource.LoadCallback {
             override fun getAllData(response: ArrayList<CraftResponse>?) {
                 dataCraft.postValue(response)
                 loading.postValue(false)

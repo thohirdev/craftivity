@@ -130,15 +130,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_favorite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:foregroundGravity="bottom"
-        app:fabSize="normal"
-        app:layout_anchor="@id/rv_detail_movie"
-        app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@drawable/ic_baseline_favorite_24" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

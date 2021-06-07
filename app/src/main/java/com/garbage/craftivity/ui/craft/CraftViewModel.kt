@@ -9,9 +9,15 @@ class CraftViewModel (private val repository: Repository): ViewModel() {
 
     fun getCraft(): LiveData<ArrayList<CraftResponse>> = repository.getCraft()
 
-    fun getCraftPaper(): LiveData<ArrayList<CraftResponse>> = repository.getCraftPaper()
+    fun getCraftCardboard(): LiveData<ArrayList<CraftResponse>> = repository.getCraftCardboard()
 
     fun getCraftGlass(): LiveData<ArrayList<CraftResponse>> = repository.getCraftGlass()
+
+    fun getCraftMetal(): LiveData<ArrayList<CraftResponse>> = repository.getCraftMetal()
+
+    fun getCraftPaper(): LiveData<ArrayList<CraftResponse>> = repository.getCraftPaper()
+
+    fun getCraftPlastic(): LiveData<ArrayList<CraftResponse>> = repository.getCraftPlastic()
 
     fun getProgressLoad() : LiveData<Boolean> = repository.loadData
 

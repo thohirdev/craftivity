@@ -3,8 +3,10 @@
     <string name="title_home">Home</string>
     <string name="title_cam">Camera</string>
     <string name="title_settings">Settings</string>
-    <string name="title_favorite">Favorite</string>
     <string name="title_craft">Craft</string>
+    <string name="setting_language">Setting Language</string>
+    <string name="list_craft">List Craft</string>
+    <string name="e_mail_us">E-mail Us</string>
 
     <string name="image_detail">Image Detail</string>
     <string name="detail_craft">Detail Craft</string>
@@ -18,9 +20,6 @@
     <string name="instruction_detail">Instruction Detail</string>
     <string name="share">Lets see the %s in the Craftivity App</string>
 
-    <string name="setting_language">Setting Language</string>
-    <string name="list_craft">List Craft</string>
-
     <string name="information_trash">Information Trash</string>
     <string name="gray">Gray</string>
     <string name="txt_gray">Residue (cigarette, butts, diapers, tissue, cotton)</string>
@@ -33,17 +32,18 @@
     <string name="yellow">Yellow</string>
     <string name="txt_yellow">Reusable Grabage (plastic, glass, cans)</string>
 
+    <string name="trash">Trash</string>
     <string name="type_trash">Type Of Trash</string>
     <string name="cardboard">Cardboard</string>
+    <string name="card_board">Card board</string>
     <string name="paper">Paper</string>
-    <string name="plastics">Plastics</string>
+    <string name="plastics">Plastic</string>
     <string name="txt_plastic">Of all the different materials we toss in the trash, plastics cause by far the biggest problem. They last a long time in the environment without breaking down—sometimes as much as 500 years. They\'re very light and they float, so plastic litter drifts across the oceans and washes up on our beaches, killing wildlife and scarring the shoreline. The only trouble is, plastics are relatively hard to recycle. There are many different kinds of plastic and they all have to be recycled in a different way. There\'s so much plastic about that waste plastic material doesn\'t have much value, so it\'s not always economic to collect. Plastic containers also tend to be large and, unless people squash them, quickly fill up recycling bins.</string>
     <string name="metal">Metal</string>
     <string name="txt_metal">Most of the metal we throw away at home comes from food and drink cans and aerosols. Typically food cans are made from steel, which can be melted down and turned into new food cans. Drinks cans are generally thinner and lighter and made from aluminum, which can also be recycled very easily. Mining aluminum is a very energy-intensive and environmentally harmful process. That\'s why waste aluminum cans have a relatively high value and why recycling them is such a good thing to do.</string>
     <string name="paper_and_cardboard">Paper and cardboard</string>
     <string name="txt_paper_and_cardboard">In the early 1970s, photocopier manufacturers got scared that we would stop using paper and turn into a paperless society. Not much chance of that! Over four decades later, the bad news is that we\'re producing more paper than ever before. But the good news is that we\'re recycling more as well. Unlike some materials, paper can be recycled only so many times. That\'s because it\'s made from plant fibers that become shorter during paper-making. When they\'re too short, they no longer make decent paper. In practice, this means some new paper always has to be added during the papermaking process.</string>
     <string name="glass">Glass</string>
-    <string name="trash">Rrash</string>
     <string name="txt_glass">Glass is very easy to recycle; waste bottles and jars can be melted down and used again and again. You simply toss old glass into the furnace with the ingredients you\'re using to make brand-new glass. Bottle banks (large containers where waste glass is collected) were the original examples of community recycling in many countries.</string>
 
     <string name="information_craft">Information Craft</string>
@@ -55,5 +55,10 @@
     <string name="txt_craft4">Crafts from Soft Materials can be divided into two types, namely natural soft materials (Examples of natural soft materials are clay, leather, nyatu gum, tissue pulp, and flour clay) and artificial soft materials (Examples of artificial soft materials are wax, gypsum, fiberglass and soap).</string>
     <string name="txt_craft5">Crafts from Hard Materials are divided into two types, namely natural hard materials (Examples of natural hard materials are wood, rattan, bamboo, bone, grain, stone, sand, and shells) and Artificial Hard Materials (Examples of natural hard materials are iron, metal, wire, glass, cement, cans, and tin)</string>
     <string name="txt_craft6">Kerajinan dari dibagi dalam bentuk limbah lunak organik (Semua bagian tumbuhan yang dapat dikategorikan limbah dapat diolah menjadi produk kerajinan) dan limbah lunak anorganik (Contohnya plastik kemasan, kotak kemasan, kain perca, karet sintetis dan styrofoam)</string>
+
+    <string name="open_camera">Open Camera</string>
+    <string name="select_image">Select Image</string>
+    <string name="make_prediction">Make Prediction</string>
+    <string name="txt_select">Select Image and Press Predict Button</string>
 
 </resources>
